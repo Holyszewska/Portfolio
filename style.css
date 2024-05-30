@@ -37,6 +37,7 @@ section article {
 .section-intro {
   background-color: #ff9f1c;
   min-height: 100vh;
+  display: flex;
 }
 
 .section-about {
@@ -66,7 +67,7 @@ h1 {
   text-align: right;
   font-family: "Roboto", sans-serif;
   font-size: 32px;
-  font-weight: 550;
+  font-weight: 746;
   font-style: normal;
   color: whitesmoke;
 }
@@ -92,11 +93,11 @@ p {
   text-align: left;
   font-family: "Roboto", sans-serif;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 100;
   font-style: normal;
 }
 
-.customer-journey-map {
+.game_intro_page {
   background-color: #d81159;
   animation: fade-in linear;
   animation-timeline: view(5vh 20vh);
@@ -112,7 +113,7 @@ p {
   opacity: 0;
   color: whitesmoke;
 }
-.mobile_app {
+.wireframes {
   background-color: #ff9f1c;
   animation: fade-in linear;
   animation-timeline: view(5vh 20vh);
@@ -156,4 +157,27 @@ p {
   float: right;
   padding-right: 1rem;
   padding-top: 1rem;
+}
+
+.moodboard_portfolio {
+  display: flex;
+  position: left;
+}
+
+.moodboard_pharma {
+  display: flex;
+  position: right;
+}
+
+.game_intro_page img {
+  border-radius: 0.5%;
+  float: left;
+}
+
+.moodboards img {
+  border-radius: 0.5%;
+}
+
+.wireframes img {
+  border-radius: 0.5%;
 }
