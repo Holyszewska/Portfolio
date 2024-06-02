@@ -1,7 +1,7 @@
 :root {
   --min-section-height: 80vh;
   --section-header-height: 4rem;
-  --section-padding: 1rem;
+  --section-padding: 2rem;
 }
 
 body {
@@ -30,14 +30,106 @@ section header h2 {
 }
 
 section article {
-  padding: 1rem;
+  padding: 2rem;
   min-height: var(--min-section-height);
 }
 
 .section-intro {
   background-color: #ff9f1c;
   min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "preloader image"
+    "preloader textik";
+  grid-template-columns: 40% 60%;
+}
+
+.section-about {
+  display: grid;
+  grid-template-areas:
+    "experience fly_dots"
+    "links fly_dots ";
+  grid-template-columns: 60% 40%;
+}
+
+.experience {
+  grid-area: experience;
+  padding-left: 2rem;
+  justify-self: start;
+}
+
+.experience > * {
+  text-align: left;
+}
+
+.links {
+  grid-area: links;
+  padding-left: 2rem;
+  justify-self: start;
+}
+
+.links > * {
+  text-align: left;
+}
+
+.fly_dots {
+  color: #d81159;
+}
+
+#foto {
+  grid-area: image;
+  justify-self: end;
+  padding-right: 10%;
+}
+
+.preloader {
+  grid-area: preloader;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.ball1 {
+  width: 80px;
+  height: 80px;
+  background-color: #284b63;
+  border-radius: 50%;
+  animation: bounce 0.5 infinite;
+  position: relative;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #d81159;
+  border-radius: 50%;
+}
+
+@keyframes bounce {
+  0% {
+    top: 0px;
+    opacity: 10%;
+  }
+  50% {
+    top: 50px;
+    opacity: 50%;
+  }
+
+  100% {
+    top: 150px;
+    opacity: 100%;
+  }
+}
+
+.o-mne {
+  grid-area: textik;
+  padding-right: 10%;
+  justify-self: start;
+}
+
+.o-mne > * {
+  text-align: left;
 }
 
 .section-about {
@@ -66,16 +158,16 @@ section article {
 h1 {
   text-align: right;
   font-family: "Roboto", sans-serif;
-  font-size: 32px;
-  font-weight: 746;
+  font-size: 36px;
+  font-weight: 700;
   font-style: normal;
   color: whitesmoke;
 }
 
 .section-intro p {
-  text-align: right;
+  text-align: left;
   font-family: "Roboto", sans-serif;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 300;
   font-style: normal;
   color: whitesmoke;
@@ -97,7 +189,23 @@ p {
   font-style: normal;
 }
 
-.game_intro_page {
+.experience p {
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.links p {
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.game_posters {
   background-color: #d81159;
   animation: fade-in linear;
   animation-timeline: view(5vh 20vh);
@@ -115,8 +223,16 @@ p {
 }
 .wireframes {
   background-color: #ff9f1c;
-  animation: fade-in linear;
-  animation-timeline: view(5vh 20vh);
+  animation: fade-in-long linear;
+  animation-timeline: view(2vh 20vh);
+  width: 100%;
+  opacity: 0;
+}
+
+.prototypes {
+  background-color: #f4f9e9;
+  animation: fade-in-long linear;
+  animation-timeline: view(2vh 20vh);
   width: 100%;
   opacity: 0;
 }
@@ -124,11 +240,11 @@ p {
 @keyframes fade-in {
   from {
     scale: 0.8;
-    opacity: 0;
-  }
-  20% {
-    scale: 1;
     opacity: 0.6;
+  }
+  5% {
+    scale: 1;
+    opacity: 0.8;
   }
 
   35% {
@@ -145,6 +261,27 @@ p {
   }
 }
 
+@keyframes fade-in-long {
+  from {
+    scale: 0.8;
+    opacity: 0;
+  }
+  10% {
+    scale: 1;
+    opacity: 0.8;
+  }
+
+  35% {
+    scale: 1;
+    opacity: 1;
+  }
+
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
 .end {
   background-color: #284b63;
   color: whitesmoke;
@@ -152,24 +289,35 @@ p {
 
 .section-intro img {
   border-radius: 50%;
-  max-width: 30%;
-  max-height: 30%;
-  float: right;
-  padding-right: 1rem;
-  padding-top: 1rem;
+  max-width: 40%;
+  max-height: 100%;
+  padding-top: 10%;
 }
 
-.moodboard_portfolio {
+.moodboard_pictures {
   display: flex;
-  position: left;
+
+  justify-content: space-evenly;
 }
 
-.moodboard_pharma {
+.moodboard_posters_pictures {
   display: flex;
-  position: right;
+
+  justify-content: space-evenly;
 }
 
-.game_intro_page img {
+.prototypes_pictures {
+  display: flex;
+
+  justify-content: space-evenly;
+}
+
+.wireframes_pictures {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.game_posters img {
   border-radius: 0.5%;
   float: left;
 }
@@ -180,4 +328,23 @@ p {
 
 .wireframes img {
   border-radius: 0.5%;
+}
+.prototypes img {
+  border-radius: 0.5%;
+}
+
+.email {
+  position: flex;
+}
+
+.section-about-description a:link {
+  color: whitesmoke;
+}
+
+.section-about-description a:visited {
+  color: whitesmoke;
+}
+
+.section-about-description a:active {
+  color: whitesmoke;
 }
