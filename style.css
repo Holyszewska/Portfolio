@@ -289,15 +289,15 @@ p {
   color: whitesmoke;
   min-height: 100vh;
   display: grid;
-  grid-template-areas:
-    "fly_dots_2 fly_dots_2"
-    "fly_dots_2 email";
+  grid-template-areas: "fly_dots_2 email";
   grid-template-columns: 70% 30%;
 }
 
 .end {
   grid-area: email;
   padding-right: 10%;
+
+  justify-items: flex-end;
 }
 
 .email > * {
