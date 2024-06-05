@@ -261,18 +261,42 @@ p {
 .section-about {
   background-color: #153243;
   color: whitesmoke;
-  animation: fade-in linear;
-  animation-timeline: view(2vh 20vh);
+  animation: fade-in-about linear;
+  animation-timeline: view(5vh 20vh);
   width: 100%;
   opacity: 0;
 }
 
-@keyframes fade-in {
+@keyframes fade-in-about {
   from {
-    scale: 0.8;
+    scale: 0.6;
     opacity: 0.6;
   }
-  5% {
+  20% {
+    scale: 1;
+    opacity: 0.8;
+  }
+
+  35% {
+    scale: 1;
+    opacity: 0.8;
+  }
+  50% {
+    scale: 1;
+    opacity: 1;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    scale: 0.6;
+    opacity: 0.6;
+  }
+  20% {
     scale: 1;
     opacity: 0.8;
   }
@@ -293,7 +317,7 @@ p {
 
 @keyframes fade-in-long {
   from {
-    scale: 0.8;
+    scale: 0.6;
     opacity: 0;
   }
   10% {
@@ -321,6 +345,10 @@ p {
     "fly_dots_2 fly_dots_3"
     "fly_dots_2 email";
   grid-template-columns: 80% 20%;
+  animation: fade-in linear;
+  animation-timeline: view(2vh 20vh);
+  width: 100%;
+  opacity: 0;
 }
 
 .fly_dots_2 {
