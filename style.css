@@ -46,7 +46,6 @@ section article {
 
 .section-about {
   display: grid;
-
   grid-template-areas:
     "experience fly_dots"
     "links fly_dots";
@@ -55,7 +54,7 @@ section article {
 
 .experience {
   grid-area: experience;
-  padding-left: 2rem;
+
   justify-self: start;
 }
 
@@ -65,7 +64,6 @@ section article {
 
 .links {
   grid-area: links;
-  padding-left: 2rem;
   justify-self: start;
 }
 
@@ -75,7 +73,6 @@ section article {
 #fly_dots {
   grid-area: fly_dots;
   justify-self: end;
-  padding-right: 10%;
 }
 
 #foto {
@@ -90,6 +87,8 @@ section article {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+  margin-top: 100%;
+  margin-bottom: 15%;
 }
 
 .ball1 {
@@ -97,8 +96,28 @@ section article {
   height: 80px;
   background-color: #284b63;
   border-radius: 50%;
-  animation: bounce 0.5 infinite;
+
   position: relative;
+}
+
+.ball2 {
+  width: 80px;
+  height: 80px;
+  background-color: #284b63;
+  border-radius: 50%;
+
+  position: relative;
+  opacity: 60%;
+}
+
+.ball3 {
+  width: 80px;
+  height: 80px;
+  background-color: #284b63;
+  border-radius: 50%;
+
+  position: relative;
+  opacity: 30%;
 }
 
 .dot {
@@ -108,35 +127,15 @@ section article {
   border-radius: 50%;
 }
 
-@keyframes bounce {
-  0% {
-    top: 0px;
-    opacity: 10%;
-  }
-  50% {
-    top: 50px;
-    opacity: 50%;
-  }
-
-  100% {
-    top: 150px;
-    opacity: 100%;
-  }
-}
-
 .o-mne {
   grid-area: textik;
   padding-right: 10%;
   justify-self: start;
+  padding-bottom: 10%;
 }
 
 .o-mne > * {
   text-align: left;
-}
-
-.section-about {
-  background-color: #153243;
-  color: whitesmoke;
 }
 
 @keyframes show {
@@ -164,8 +163,17 @@ h1 {
   font-weight: 700;
   font-style: normal;
   color: whitesmoke;
+  margin-right: 150px;
 }
-
+h1:after {
+  content: "\A";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d81159;
+  display: inline-block;
+  margin-left: 10px;
+}
 .section-intro p {
   text-align: left;
   font-family: "Roboto", sans-serif;
@@ -191,11 +199,19 @@ p {
   font-style: normal;
 }
 
+.experience h2 {
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .experience p {
   text-align: left;
   font-family: "Roboto", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 32px;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -205,6 +221,7 @@ p {
   font-size: 24px;
   font-weight: 100;
   font-style: normal;
+  vertical-align: bottom;
 }
 
 .game_posters {
@@ -229,11 +246,22 @@ p {
   animation-timeline: view(2vh 20vh);
   width: 100%;
   opacity: 0;
+  padding-bottom: 5%;
 }
 
 .prototypes {
   background-color: #f4f9e9;
   animation: fade-in-long linear;
+  animation-timeline: view(2vh 20vh);
+  width: 100%;
+  opacity: 0;
+  padding-bottom: 5%;
+}
+
+.section-about {
+  background-color: #153243;
+  color: whitesmoke;
+  animation: fade-in linear;
   animation-timeline: view(2vh 20vh);
   width: 100%;
   opacity: 0;
@@ -289,19 +317,38 @@ p {
   color: whitesmoke;
   min-height: 100vh;
   display: grid;
-  grid-template-areas: "fly_dots_2 email";
-  grid-template-columns: 70% 30%;
+  grid-template-areas:
+    "fly_dots_2 fly_dots_3"
+    "fly_dots_2 email";
+  grid-template-columns: 80% 20%;
 }
 
-.end {
-  grid-area: email;
-  padding-right: 10%;
-
-  justify-items: flex-end;
+.fly_dots_2 {
+  grid-area: fly_dots_2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.email p {
+  font-size: 30px;
+  font-weight: 300;
+  font-style: normal;
+  text-align: end;
 }
 
 .email > * {
   text-align: right;
+  margin-top: 200%;
+}
+
+#email {
+  grid-area: email;
+  justify-self: end;
+}
+
+.end {
+  padding-right: 5%;
 }
 
 .end img {
@@ -311,15 +358,13 @@ p {
 }
 
 .section-intro img {
-  border-radius: 50%;
-  max-width: 40%;
-  max-height: 100%;
+  max-width: 65%;
+  max-height: 65%;
   padding-top: 10%;
 }
 
 .moodboard_pictures {
   display: flex;
-
   justify-content: space-evenly;
 }
 
