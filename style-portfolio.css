@@ -1,0 +1,105 @@
+.additional-padding {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.portfolio-texts h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-texts p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.max-height-50vh {
+  max-height: 50vh;
+  overflow: hidden;
+  display: block;
+}
+
+.game-posters,
+.moodboards,
+.wireframes,
+.prototypes {
+  display: grid;
+  place-items: center;
+}
+
+.game-posters {
+  background-color: var(--color-pink-500);
+  animation: fade-in linear;
+  animation-timeline: view(5vh 20vh);
+  width: 100%;
+  opacity: 0;
+}
+
+.game-posters_pictures {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.moodboards {
+  background-color: var(--color-indigo-500);
+  animation: fade-in linear;
+  animation-timeline: view(5vh 20vh);
+  width: 100%;
+  opacity: 0;
+  color: var(--color-ivory-500);
+}
+.wireframes {
+  background-color: var(--color-orange-500);
+  animation: fade-in-long linear;
+  animation-timeline: view(2vh 20vh);
+  width: 100%;
+  opacity: 0;
+}
+
+.prototypes {
+  background-color: var(--color-ivory-500);
+  animation: fade-in-long linear;
+  animation-timeline: view(2vh 20vh);
+  width: 100%;
+  opacity: 0;
+}
+
+.moodboard_pictures {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.prototypes_pictures {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.wireframes_pictures {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.game-posters img {
+  border-radius: 0.5%;
+  float: left;
+}
+
+.moodboards img {
+  border-radius: 0.5%;
+}
+
+.wireframes img {
+  border-radius: 0.5%;
+}
+.prototypes img {
+  border-radius: 0.5%;
+}
+
+.email {
+  position: flex;
+}

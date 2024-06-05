@@ -9,97 +9,124 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anna-Holyszewska</title>
+    <title>Portfolio: Anna Holyszewská</title>
+    <link rel="stylesheet" href="style-animations.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-intro.css" />
+    <link rel="stylesheet" href="style-about.css" />
+    <link rel="stylesheet" href="style-portfolio.css" />
+    <link rel="stylesheet" href="photoswipe.css" />
+    <link rel="stylesheet" href="style-end.css" />
+    <script src="photoswipe.umd.min.js" defer></script>
+    <script src="photoswipe-lightbox.umd.min.js" defer></script>
     <script src="script.js" defer></script>
   </head>
   <body>
     <div class="wrap">
       <section class="section-intro">
-        <div class="preloader">
+        <div class="preloader" id="preloader">
           <div class="ball1"></div>
-          <div class="ball2"></div>
-          <div class="ball3"></div>
         </div>
 
-        <img src="anna.png" id="foto" alt="anna_holyszewska" />
+        <div class="o-mne-foto">
+          <div class="intro-shape">
+            <img src="img/anna.png" id="foto" alt="anna_holyszewska" />
+          </div>
+        </div>
+
         <div class="o-mne">
-          <h1>Anna Holyszewská</h1>
+          <h1>Anna Holyszewská<span class="ornamental-dot"></span></h1>
 
           <p>Project Manager and UX/UI designer</p>
-          <p>anna@holyszewski.cz</p>
+          <p>
+            <a href="mailto:anna@holyszewski.cz" title="Write me an email"
+              >anna@holyszewski.cz</a
+            >
+          </p>
         </div>
       </section>
       <section class="section-about">
-        <article class="animate-show">
-          <div class="section-about-description">
-            <h2>About</h2>
-            <div class="experience">
-              <p>
-                Hi Everyone, I am Anna, your new Project Manager focusing on
-                UX/UI design with experience from international companies.
-              </p>
-              <p>The Chamber of Project Managers Czech Republic member.</p>
-            </div>
-            <br /><br /><br /><br /><br /><br /><br />
-            <div class="links">
-              <p>
-                Click here to see my
-                <a href="holyszewska_EN_CV.pdf">Curriculum vitae.</a>
-              </p>
-              <p>
-                Click here to see my
-                <a href="https://cz.linkedin.com/in/anna-holyszewska"
-                  >LinkedIn Profile.</a
-                >
-              </p>
-            </div>
-          </div>
+        <article class="experience">
+          <h2>About</h2>
+          <p>Hi there,</p>
+          <p>
+            I'm <strong>Anna</strong>, your new
+            <strong>Project Manager</strong> specializing in
+            <strong class="highlighted">UX/UI design</strong>.
+          </p>
+          <p>
+            I bring experience from international companies and am a
+            <strong>proud member</strong> of the Chamber of Project Managers in
+            the Czech Republic.
+          </p>
+
+          <p>Looking forward to working with you all!</p>
         </article>
-        <article>
-          <div class="fly_dots">
-            <img src="fly_dots.png" alt="dots" style="max-width: 100%" />
+        <aside class="links">
+          <div>
+            <p>Check this out <span class="highlighted">⟶</span></p>
+            <p>
+              <a href="holyszewska_EN_CV.pdf"
+                >View my <span>Curriculum vitae.</span></a
+              >
+            </p>
+            <p>
+              <a href="https://cz.linkedin.com/in/anna-holyszewska"
+                >Check my <span>LinkedIn Profile.</span></a
+              >
+            </p>
           </div>
-        </article>
+        </aside>
+        <div class="flying-dots-wrap">
+          <div class="flying-dots" id="flying-dots">
+            <div class="dot dot-1 big orange"></div>
+            <div class="dot dot-2 normal orange"></div>
+            <div class="dot dot-3 small blue"></div>
+            <div class="dot dot-4 normal white"></div>
+            <div class="dot dot-5 small pink"></div>
+          </div>
+        </div>
       </section>
 
-      <section class="game_posters">
-        <article>
-          <h2>View projects</h2>
-          <p>Game intro page & Posters</p>
-          <div class="moodboard_posters_pictures">
+      <section class="game-posters">
+        <article class="additional-padding portfolio-texts">
+          <h2>Design projects</h2>
+          <p>
+            Game intro page & Posters<span class="ornamental-dot white"></span>
+          </p>
+          <div class="game-posters_pictures">
             <div class="game_intro_page">
               <a
-                href="game.jpg"
+                href="img/game.jpg"
                 alt="game_intro"
-                data-pswp-width="1669"
-                data-pswp-height="2500"
+                data-pswp-width="2880"
+                data-pswp-height="2048"
                 target="_blank"
               >
-                <img src="game_s.jpg" alt="game_intro" />
+                <img src="img/game_s.jpg" alt="game_intro" />
               </a>
             </div>
             <div class="posters">
               <a
-                href="posters.jpg"
+                href="img/posters.jpg"
                 alt="posters"
-                data-pswp-width="1669"
-                data-pswp-height="2500"
+                data-pswp-width="1414"
+                data-pswp-height="2000"
                 target="_blank"
               >
-                <img src="posters_s.jpg" alt="posters_small" />
+                <img src="img/posters_s.jpg" alt="posters_small" />
               </a>
             </div>
 
             <div class="posters_2">
               <a
-                href="posters_2.jpg"
+                href="img/posters_2.jpg"
                 alt="posters"
-                data-pswp-width="1669"
-                data-pswp-height="2500"
+                data-pswp-width="1414"
+                data-pswp-height="2000"
                 target="_blank"
               >
-                <img src="posters_2_s.jpg" alt="posters_small" />
+                <img src="img/posters_2_s.jpg" alt="posters_small" />
               </a>
             </div>
           </div>
@@ -107,30 +134,30 @@
       </section>
 
       <section class="moodboards">
-        <article>
-          <h2>View projects</h2>
-          <p>Moodboards</p>
+        <article class="additional-padding portfolio-texts">
+          <h2>UX projects</h2>
+          <p>Moodboards<span class="ornamental-dot"></span></p>
           <div class="moodboard_pictures">
             <div class="moodboard_portfolio">
               <a
-                href="moodboard_portfolio.jpg"
+                href="img/moodboard_portfolio.jpg"
                 alt="moodboard_portfolio"
-                data-pswp-width="1669"
-                data-pswp-height="2500"
+                data-pswp-width="2880"
+                data-pswp-height="2048"
                 target="_blank"
               >
-                <img src="moodboard_portfolio_s.jpg" alt="moodboards" />
+                <img src="img/moodboard_portfolio_s.jpg" alt="moodboards" />
               </a>
             </div>
             <div class="moodboard_pharma">
               <a
-                href="moodboard_pharma.jpg"
+                href="img/moodboard_pharma.jpg"
                 alt="moodboard_pharma"
-                data-pswp-width="1669"
-                data-pswp-height="2500"
+                data-pswp-width="2880"
+                data-pswp-height="2048"
                 target="_blank"
               >
-                <img src="moodboard_pharma_s.jpg" alt="moodboards" />
+                <img src="img/moodboard_pharma_s.jpg" alt="moodboards" />
               </a>
             </div>
           </div>
@@ -138,47 +165,52 @@
       </section>
 
       <section class="wireframes">
-        <article>
+        <article class="additional-padding portfolio-texts">
           <h2>View projects</h2>
-          <p>Wireframes for desktop & mobile</p>
+          <p>
+            Wireframes for desktop & mobile<span class="ornamental-dot"></span>
+          </p>
           <div class="wireframes_pictures">
             <div class="wireframe_mobile">
               <a
-                href="wireframe_mobile.jpg"
+                href="img/wireframe_mobile.jpg"
+                class="max-height-50vh"
                 alt="wireframe_mobile"
-                data-pswp-width="1669"
-                data-pswp-height="2500"
+                data-pswp-width="780"
+                data-pswp-height="2348"
                 target="_blank"
               >
                 <img
-                  src="wireframe_mobile_s.jpg"
+                  src="img/wireframe_mobile_s.jpg"
                   alt="wireframe_mobile_small"
                 />
               </a>
             </div>
             <div class="wireframe_social_network">
               <a
-                href="wireframe_social_network.jpg"
+                href="img/wireframe_social_network.jpg"
+                class="max-height-50vh"
                 alt="wireframe_social_network"
-                data-pswp-width="1669"
-                data-pswp-height="2500"
+                data-pswp-width="2880"
+                data-pswp-height="4588"
                 target="_blank"
               >
                 <img
-                  src="wireframe_social_network_s.jpg"
+                  src="img/wireframe_social_network_s.jpg"
                   alt="wireframe_social_network_s"
                 />
               </a>
             </div>
             <div class="wireframe_mobile_long">
               <a
-                href="wireframe_mobile_long.jpg"
+                href="img/wireframe_mobile_long.jpg"
+                class="max-height-50vh"
                 alt="moodboard_pharma"
-                data-pswp-width="1669"
-                data-pswp-height="2500"
+                data-pswp-width="780"
+                data-pswp-height="3772"
                 target="_blank"
               >
-                <img src="wireframe_mobile_long_s.jpg" alt="moodboards" />
+                <img src="img/wireframe_mobile_long_s.jpg" alt="moodboards" />
               </a>
             </div>
           </div>
@@ -186,30 +218,34 @@
       </section>
 
       <section class="prototypes">
-        <article>
+        <article class="additional-padding portfolio-texts">
           <h2>View projects</h2>
-          <p>Prototypes for desktop & mobile</p>
+          <p>
+            Prototypes for desktop & mobile<span class="ornamental-dot"></span>
+          </p>
           <div class="prototypes_pictures">
             <div class="prototypes_mobile">
               <a
-                href="CoC_1.jpg"
+                href="img/CoC_1.jpg"
+                class="max-height-50vh"
                 alt="prototypes_mobile"
-                data-pswp-width="1669"
-                data-pswp-height="2500"
+                data-pswp-width="672"
+                data-pswp-height="2144"
                 target="_blank"
               >
-                <img src="CoC_1_s.jpg" alt="protypes_mobile_small" />
+                <img src="img/CoC_1_s.jpg" alt="protypes_mobile_small" />
               </a>
             </div>
             <div class="prototypes_player">
               <a
-                href="player.jpg"
+                href="img/player.jpg"
+                class="max-height-50vh"
                 alt="prototypes_player"
-                data-pswp-width="1669"
-                data-pswp-height="2500"
+                data-pswp-width="1440"
+                data-pswp-height="800"
                 target="_blank"
               >
-                <img src="player_s.jpg" alt="prototypes_player_small" />
+                <img src="img/player_s.jpg" alt="prototypes_player_small" />
               </a>
             </div>
           </div>
@@ -218,10 +254,10 @@
 
       <section class="end">
         <div class="fly_dots_2">
-          <img src="fly_dots_2.png" alt="fly_dots_2" />
+          <img src="img/fly_dots_2.png" alt="fly_dots_2" />
         </div>
         <div class="fly_dots_3">
-          <img src="fly_dots_3.png" alt="fly_dots_3" />
+          <img src="img/fly_dots_3.png" alt="fly_dots_3" />
         </div>
         <div class="email" alt="email">
           <p>anna@holyszewski.cz</p>

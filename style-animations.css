@@ -1,0 +1,126 @@
+@keyframes bounce {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translateY(50px) scale(0.9);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(100px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  to {
+    min-height: var(--min-section-height);
+    height: auto;
+    overflow: auto;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    scale: 0.8;
+    opacity: 0.6;
+  }
+  5% {
+    scale: 1;
+    opacity: 0.8;
+  }
+
+  35% {
+    scale: 1;
+    opacity: 0.8;
+  }
+  50% {
+    scale: 1;
+    opacity: 1;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-long {
+  from {
+    scale: 0.8;
+    opacity: 0;
+  }
+  10% {
+    scale: 1;
+    opacity: 0.8;
+  }
+
+  35% {
+    scale: 1;
+    opacity: 1;
+  }
+
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-simple {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    scale: 1;
+    opacity: 1;
+  }
+  to {
+    scale: 0.8;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-dot {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 40% 60% 60% 40%/60% 30% 70% 40%;
+  }
+  100% {
+    border-radius: 40% 60%;
+  }
+}
+
+@keyframes about-dots {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 0.8;
+  }
+  100% {
+    scale: 1;
+  }
+}

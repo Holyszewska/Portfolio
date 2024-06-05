@@ -1,0 +1,105 @@
+.section-intro {
+  --section-animate-first-delay: 0.1s;
+  --section-animate-second-delay: 0.7s;
+
+  background-color: #ff9f1c;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "preloader image"
+    "preloader textik";
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 2fr 1fr;
+}
+
+.preloader {
+  grid-area: preloader;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  animation: fade-out 0.5s forwards;
+}
+
+.ball1 {
+  width: 80px;
+  height: 80px;
+  background-color: #284b63;
+  border-radius: 50%;
+  animation: bounce 1.5s infinite;
+  position: relative;
+}
+
+.o-mne {
+  grid-area: textik;
+  justify-self: start;
+
+  opacity: 0;
+  animation: fade-in-simple 0.7s ease-in forwards
+    var(--section-animate-first-delay);
+}
+
+.section-intro a {
+  color: var(--color-ivory-500);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.section-intro a:hover {
+  color: var(--color-ivory-500);
+  background-color: var(--color-pink-500);
+  padding: 0.5rem 1rem;
+  margin-left: -1rem;
+  margin-top: -0.5rem;
+}
+
+.section-intro h1 {
+  color: var(--color-ivory-500);
+  margin-bottom: 0;
+}
+
+.section-intro h1 + p {
+  margin-top: 0;
+}
+
+.section-intro p {
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  font-style: normal;
+  color: var(--color-ivory-500);
+}
+
+.o-mne-foto {
+  grid-area: image;
+
+  padding-right: 15%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  opacity: 0;
+  animation: fade-in-simple 0.7s ease-in forwards
+    var(--section-animate-second-delay);
+}
+
+.intro-shape {
+  max-width: 40vh;
+  transition: border-radius 1s ease-out;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  animation: morph 8s ease-in-out infinite both alternate;
+  position: absolute;
+  overflow: hidden;
+}
+
+.section-intro img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}

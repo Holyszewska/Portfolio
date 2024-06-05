@@ -1,43 +1,68 @@
-(function () {
-  "use strict";
+function hidePreloader() {
+  let pocetSekund = 1;
+  setTimeout(() => {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("hidden");
+  }, pocetSekund * 1000);
+}
 
-  var animateCountUp = function animateCountUp(el) {
-    el.classList.add("animated");
-  }; // Run the animation on all elements with a class of animate-show
+function showDotsAbout() {
+  const flyingDots = document.getElementById("flying-dots");
+  flyingDots.classList.add("flying-dots-animation");
 
-  var runAnimations = function runAnimations() {
-    var countupEls = document.querySelectorAll(".animate-show");
-    countupEls.forEach(animateCountUp);
-  };
+  const dots = flyingDots.querySelectorAll(".dot");
+  document.addEventListener("mousemove", (event) => {
+    dots.forEach((dot, index) => {
+      const x = event.clientX;
+      const y = event.clientY;
 
-  // this is the target which is observed
-  var target = document.querySelector(".animate-show");
-
-  // configure the intersection observer instance
-  var intersectionObserverOptions = {
-    root: null, // default is the viewport
-    threshold: 0.5, // percentage of the taregt visible area which will trigger "onIntersection"
-  };
-
-  var observer = new IntersectionObserver(
-    onIntersection,
-    intersectionObserverOptions
-  );
-
-  // called when target is fully visible
-  function onIntersection(entries, opts) {
-    entries.forEach((entry) => {
-      var visible = entry.intersectionRatio >= opts.thresholds[0];
-
-      if (visible) {
-        runAnimations();
-
-        // To stop watching
-        observer.unobserve(entry.target);
+      if (dot.classList.contains("big")) {
+        dot.style.transform = `translate(${x / 5}px, ${y / 5}px)`;
+        return;
       }
-    });
-  }
 
-  // provide the observer with a target
-  observer.observe(target);
+      if (dot.classList.contains("small")) {
+        dot.style.transform = `translate(${x / 20}px, ${y / 20}px)`;
+        return;
+      }
+
+      dot.style.transform = `translate(${x / 10}px, ${y / 10}px)`;
+    });
+  });
+}
+
+function galleries() {
+  let gallery1 = new PhotoSwipeLightbox({
+    gallery: ".game-posters_pictures",
+    children: "a",
+    pswpModule: PhotoSwipe,
+  });
+  gallery1.init();
+
+  let gallery2 = new PhotoSwipeLightbox({
+    gallery: ".moodboard_pictures",
+    children: "a",
+    pswpModule: PhotoSwipe,
+  });
+  gallery2.init();
+
+  let gallery3 = new PhotoSwipeLightbox({
+    gallery: ".wireframes_pictures",
+    children: "a",
+    pswpModule: PhotoSwipe,
+  });
+  gallery3.init();
+
+  let gallery4 = new PhotoSwipeLightbox({
+    gallery: ".prototypes_pictures",
+    children: "a",
+    pswpModule: PhotoSwipe,
+  });
+  gallery4.init();
+}
+
+(function () {
+  hidePreloader();
+  showDotsAbout();
+  galleries();
 })();
