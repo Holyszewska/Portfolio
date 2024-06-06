@@ -1,0 +1,181 @@
+.section-end {
+  display: grid;
+
+  grid-template-areas:
+    "end-text fly_dots"
+    "email fly_dots";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 2fr 1fr;
+
+  background-color: var(--color-indigo-500);
+  color: var(--color-ivory-500);
+
+  max-height: 80vh;
+}
+
+.section-end h2 {
+  font-size: 42px;
+  margin-top: 0;
+  padding-left: 4rem;
+  padding-top: 4rem;
+}
+
+.section-end .highlighted {
+  color: var(--color-pink-500);
+}
+
+.end-text {
+  grid-area: end-text;
+  padding-left: 4rem;
+  padding-top: 4rem;
+  box-sizing: border-box;
+}
+
+.email {
+  grid-area: email;
+  padding-left: 4rem;
+  padding-bottom: 4rem;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.end-text p {
+  font-size: 24px;
+  font-weight: 100;
+  font-style: normal;
+  max-width: 38ex;
+}
+
+.end-text strong {
+  font-weight: 400;
+}
+
+.email p {
+  font-size: 24px;
+  font-weight: 100;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+.email p:last-child {
+  margin-bottom: 0;
+}
+
+.email a {
+  text-decoration: none;
+  background-color: var(--color-pink-500);
+  color: var(--color-ivory-500);
+  padding: 0.5rem 1rem;
+}
+
+.email a:link {
+  color: var(--color-ivory-500);
+}
+
+.email a:visited {
+  color: var(--color-ivory-500);
+}
+
+.email a:active,
+.email a:hover {
+  color: var(--color-ivory-500);
+  background-color: var(--color-orange-500);
+}
+
+.flying-dots-wrap {
+  grid-area: fly_dots;
+  display: grid;
+  place-items: center;
+}
+
+.flying-dots {
+  position: relative;
+}
+
+.flying-dots .dot {
+  transition: all 3s ease-in-out 0.1s;
+}
+
+.flying-dots.flying-dots-animation .dot {
+  animation: about-dots 30s infinite;
+}
+
+.flying-dots.flying-dots-animation .dot-1 {
+  animation-delay: 5s;
+}
+
+.flying-dots.flying-dots-animation .dot-2 {
+  animation-delay: 7s;
+}
+
+.flying-dots.flying-dots-animation .dot-3 {
+  animation-delay: 12s;
+}
+
+.flying-dots.flying-dots-animation .dot-4 {
+  animation-delay: 20s;
+}
+
+.flying-dots.flying-dots-animation .dot-5 {
+  animation-delay: 1s;
+}
+
+.dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  background-color: var(--color-ivory-500);
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+.dot.big {
+  width: 140px;
+  height: 140px;
+}
+
+.dot.small {
+  width: 70px;
+  height: 70px;
+}
+
+.dot.orange {
+  background-color: var(--color-orange-500);
+}
+
+.dot.pink {
+  background-color: var(--color-pink-500);
+}
+
+.dot.blue {
+  background-color: var(--color-blue-500);
+}
+
+.dot.dot-1 {
+  top: -35vh;
+  left: -10vw;
+}
+
+.dot.dot-2 {
+  top: -10vh;
+  left: 10vw;
+}
+
+.dot.dot-3 {
+  top: 30vh;
+  left: 10vw;
+}
+
+.dot.dot-4 {
+  top: 50%;
+  left: 50%;
+}
+
+.dot.dot-5 {
+  top: 20vh;
+  left: -10vw;
+}
